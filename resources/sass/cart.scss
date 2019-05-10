@@ -1,0 +1,499 @@
+.cart {
+	&__wrapper {
+		display: block;
+
+		&.white-popup {
+			@include breakpoint(mobile) {
+				padding: 15px;
+			}
+
+			@include breakpoint(tablet) {
+				padding: 30px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		font-family: ProximaNova, sans-serif;
+		font-weight: bold;
+		color: $title-color;
+		margin: 0;
+		display: block;
+
+		@include breakpoint(mobile) {
+			display: flex;
+			justify-content: center;
+		}
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+
+	&__delete {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		@include breakpoint(mobile) {
+			position: absolute;
+			top: 5px;
+			left: 0px;
+		}
+
+		@include breakpoint(mobile-landscape) {
+			top: 20px;
+			left: 0;
+		}
+
+		@include breakpoint(tablet) {
+			top: 10px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			position: unset;
+		}
+	}
+
+	&__lower {
+		display: flex;
+		padding-top: 45px;
+		align-items: center;
+		justify-content: space-between;
+
+		@include breakpoint(mobile) {
+			flex-direction: column;
+		}
+
+		@include breakpoint(tablet) {
+			flex-direction: row;
+		}
+
+		.item__buy-button {
+			padding: 16px 26px;
+		}
+
+		.path-link {
+			color: #000;
+			font-size: 14px;
+
+			@include breakpoint(mobile) {
+				align-self: flex-end;
+				max-width: unset;
+			}
+
+			@include breakpoint(tablet) {
+				align-self: unset;
+			}
+		}
+
+		.total-price {
+			display: flex;
+			background-color: #fffedb;
+			padding: 6px 45px;
+			align-items: center;
+			font-size: 14px;
+			font-family: ProximaNova, sans-serif;
+			color: #363636;
+
+			@include breakpoint(mobile) {
+				margin: 20px 0;
+				flex-direction: column;
+			}
+
+			@include breakpoint(tablet) {
+				margin: 0;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				flex-direction: row;
+			}
+
+			.item-price--new {
+				margin-left: 20px;
+				display: flex;
+				align-items: flex-end;
+				font-size: 18px;
+
+				&--digits {
+					font-size: 30px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		padding: 30px 0;
+		position: relative;
+		overflow: hidden;
+
+		& + .cart-empty {
+			display: none;
+		}
+
+		.table-input {
+			&.error {
+				display: inline !important;
+			}
+		}
+
+		@include breakpoint(mobile) {
+			flex-direction: column;
+			padding-top: 50px;
+		}
+
+		@include breakpoint(tablet) {
+			flex-direction: row;
+			padding-top: 30px;
+		}
+
+		.item__title-text {
+			@include breakpoint(mobile) {
+				font-size: 14px;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 17px;
+			}
+		}
+
+		&__info {
+			display: flex;
+
+			@include breakpoint(mobile) {
+				flex-direction: column;
+			}
+
+			@include breakpoint(mobile-landscape) {
+				flex-direction: row;
+			}
+		}
+
+		.counter-total__wrapper {
+			display: flex;
+
+			@include breakpoint(mobile) {
+				flex-direction: column;
+				margin-top: 30px;
+				width: 100%;
+				align-items: center;
+			}
+
+			@include breakpoint(mobile-landscape) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			@include breakpoint(tablet) {
+				justify-content: unset;
+				margin-top: 0;
+				width: unset;
+				margin-left: 50px;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				margin-left: 0;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			left: 0;
+			right: 0;
+			top: 100%;
+			height: 1px;
+			background-color: $d2;
+		}
+
+		&:first-child {
+			padding: 30px 0 40px;
+		}
+
+		&__image {
+			@include breakpoint(mobile) {
+				width: 100px;
+				height: auto;
+				margin: 0 auto;
+			}
+
+			@include breakpoint(mobile-landscape) {
+				width: 80px;
+				height: auto;
+				margin: 0 40px 0 20px;
+			}
+
+			@include breakpoint(tablet) {
+				width: 60px;
+				height: auto;
+			}
+
+			&-wrap {
+				@include breakpoint(mobile) {
+					text-align: center;
+				}
+
+				@include breakpoint(mobile-landscape) {
+					text-align: unset;
+				}
+
+				@include breakpoint(tablet) {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+
+		&__delete {
+			width: 16px;
+			height: 16px;
+			fill: #f00;
+		}
+
+		&__description {
+			display: block;
+			padding-top: 10px;
+		}
+
+		&__price-for-piece {
+			padding-top: 10px;
+			display: flex;
+			align-items: flex-end;
+
+			@include breakpoint(mobile) {
+				display: inline-flex;
+				padding-top: 0;
+			}
+
+			@include breakpoint(tablet) {
+				padding-top: 10px;
+				display: flex;
+			}
+
+			.item-price--new {
+				display: flex;
+				align-items: flex-end;
+				margin-left: 5px;
+				font-size: 14px;
+
+				&--digits {
+					font-size: 19px;
+					margin-right: 5px;
+				}
+			}
+		}
+
+		&__counter {
+			@include breakpoint(mobile) {
+				margin-left: 0;
+				margin-bottom: 20px;
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			@include breakpoint(mobile-landscape) {
+				width: unset;
+				justify-content: unset;
+			}
+
+			@include breakpoint(tablet) {
+				margin-bottom: 0;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				margin-bottom: 25px;
+				margin-left: 10px;
+
+			}
+
+			label {
+				&.error {
+					display: none !important;
+				}
+			}
+
+			.error {
+				border: none;
+			}
+
+			.table-input {
+				width: 88px;
+			}
+
+			.counter-decrement {
+				width: 17px;
+				height: 17px;
+				fill: #8c8c8c;
+			}
+
+			.counter-increment {
+				width: 17px;
+				height: 17px;
+				fill: $orange-bg;
+			}
+
+			.counter-button {
+				background-color: transparent;
+				border: none;
+				cursor: pointer;
+				outline: none;
+				padding: 0;
+
+				@include breakpoint(mobile) {
+					margin: 0 10px;
+				}
+
+				@include breakpoint(tablet-landscape) {
+					margin: 0 18px;
+				}
+			}
+		}
+
+		&__delete-item {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top:0;
+			bottom: 1px;
+			background-color: rgba(0,0,0, 0.85);
+			align-items: center;
+			justify-content: center;
+			display: none;
+		}
+
+		&__total-price {
+			display: flex;
+			min-width: 175px;
+
+			@include breakpoint(mobile) {
+				margin: 0;
+				justify-content: flex-end;
+				align-self: flex-end;
+			}
+
+			@include breakpoint(mobile-landscape) {
+				align-self: center;
+			}
+
+			@include breakpoint(tablet) {
+				align-self: unset;
+				justify-content: center;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				margin: 0 0 0 70px;
+				justify-content: unset;
+			}
+
+			.item-price--new {
+				display: flex;
+				align-items: flex-end;
+				font-size: 18px;
+				padding-bottom: 25px;
+
+				@include breakpoint(mobile) {
+					justify-content: center;
+					padding-bottom: 0;
+				}
+
+				@include breakpoint(tablet-landscape) {
+					justify-content: unset;
+					padding-bottom: 25px;
+				}
+
+				&--digits {
+					margin-right: 10px;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}
+
+.cart-empty {
+	padding: 35px 0 20px;
+
+	&__text {
+		font-size: 18px;
+		color: #888;
+		font-weight: 500;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.price-for-piece {
+	@include breakpoint(mobile) {
+		display: none;
+	}
+
+	@include breakpoint(tablet) {
+		display: inline;
+	}
+}
+
+.are-you-sure {
+	color: $d2;
+	width: 100%;
+	text-align: center;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__buttons {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&--yes {
+		padding: 5px 15px;
+		max-width: 45px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background-color: #54ab07;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			transition: 0.25s;
+			background-color: #000000;
+		}
+	}
+
+	&--no {
+		max-width: 45px;
+		padding: 5px 10px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background-color: #cd1c0e;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			transition: 0.25s;
+			background-color: #000000;
+		}
+	}
+}
+
+.yes {
+	width: 25px;
+	height: 25px;
+	fill: $white;
+}

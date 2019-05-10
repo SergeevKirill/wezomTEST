@@ -1,0 +1,137 @@
+.contacts-data {
+	margin-left: 25px;
+
+	@include breakpoint(mobile) {
+		width: 75%;
+		padding-top: 30px;
+		margin: 0 auto;
+	}
+
+	@include breakpoint(min-width, 375px) {
+		width: calc(50% - 20px);
+		margin-left: 25px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			text-align: center;
+			padding-top: 20px;
+			margin: 0 auto;
+		}
+
+	}
+
+	@include breakpoint(tablet) {
+		width: calc(33% - 20px);
+		margin-left: 25px;
+		padding-top: 0;
+
+		&:last-child {
+			text-align: unset;
+			padding-top: 0;
+			margin-left: 25px;
+		}
+	}
+
+	@include breakpoint(tablet-landscape) {
+		width: calc(25% - 20px);
+		margin-right: 0;
+	}
+
+
+	&__content {
+		&.social-media {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		color: $title-color;
+		font-weight: bold;
+		font-family: ProximaNova, sans-serif;
+		margin: 10px 0 25px;
+	}
+
+	&__wrapper {
+		display: flex;
+		padding-bottom: 90px;
+
+		@include breakpoint(mobile) {
+			margin: 0 5px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		@include breakpoint(tablet) {
+			flex-wrap: nowrap;
+			justify-content: unset;
+		}
+
+		@include breakpoint(min-width, 1200px) {
+			margin: 0;
+		}
+	}
+
+	&__phone {
+		font-weight: bold;
+		font-style: italic;
+		font-family: ProximaNova, sans-serif;
+		display: block;
+		color: #000;
+		margin: 10px 0;
+
+		@include breakpoint(mobile-landscape) {
+			font-size: 22px;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 24px;
+		}
+	}
+
+	&__address {
+		display: block;
+		font-family: ProximaNova, sans-serif;
+		font-size: 14px;
+		color: #757575;
+		margin-top: 7px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.social-media {
+	&__button {
+		width: 95px;
+		padding: 15.5px 0;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		margin-left: 10px;
+
+		@include breakpoint(mobile) {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@include breakpoint(mobile-landscape) {
+			height: unset;
+			width: 95px;
+			border-radius: unset;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

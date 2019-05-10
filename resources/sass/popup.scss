@@ -1,0 +1,472 @@
+.white-popup {
+	background-color: $white;
+	display: flex;
+	padding: 35px;
+
+	&__wrapper {
+		padding: 15px;
+	}
+
+	@include breakpoint(mobile) {
+		display: flex;
+		flex-direction: column;
+		padding: 35px 0;
+	}
+
+	@include breakpoint(mobile-landscape) {
+		padding: 35px;
+	}
+
+	@include breakpoint(tablet) {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.login-popup {
+	&__left-side {
+		padding: 0 40px;
+		position: relative;
+
+		&::before {
+			background-color: #dbdbdb;
+			bottom: 0;
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+
+			@include breakpoint(mobile) {
+				background: none;
+			}
+		}
+
+		@include breakpoint(mobile) {
+			padding: 0 15px 20px;
+
+			&::after {
+				position: absolute;
+				content: '';
+				bottom: 0;
+				left: 15px;
+				right: 15px;
+				height: 1px;
+				background-color: #000000;
+			}
+		}
+
+		@include breakpoint(mobile-landscape) {
+			padding: 0 15px 20px;
+		}
+
+		@include breakpoint(tablet) {
+			padding: 0 10px;
+
+			&::before {
+				background: #dbdbdb;
+				left: 100%;
+				width: 1px;
+			}
+
+			&::after {
+				height: 0;
+			}
+		}
+
+		@include breakpoint(tablet-landscape) {
+			padding: 0 40px;
+		}
+	}
+
+	&__right-side {
+		padding: 0 40px;
+
+		.title {
+			padding-bottom: 40px;
+
+			@include breakpoint(tablet) {
+				text-align: center;
+				padding: 0;
+			}
+
+			@include breakpoint(mobile) {
+				padding: 0;
+				text-align: center;
+			}
+
+		}
+
+		@include breakpoint(mobile) {
+			padding: 0 15px;
+		}
+
+		@include breakpoint(mobile-landscape) {
+			padding: 0 40px;
+		}
+
+		@include breakpoint(tablet) {
+			padding: 0 10px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			padding: 0 40px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	@include breakpoint(mobile-landscape) {
+		padding: 35px;
+	}
+
+	@include breakpoint(tablet) {
+		flex-direction: row;
+	}
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+	color: $title-color;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	& label {
+		&.error {
+			position: absolute;
+			color: #f00;
+			top: 100%;
+			font-size: 14px;
+		}
+	}
+
+	& input {
+		&.error {
+			border: 1px solid #f00;
+		}
+	}
+}
+
+.checkbox-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.popup {
+	&__label {
+		color: $title-color;
+		font-size: 14px;
+		margin: 0;
+		padding: 20px 0 15px;
+	}
+
+	&-button {
+		&-wrapper {
+			@include breakpoint(mobile) {
+				display: flex;
+				justify-content: center;
+			}
+
+			@include breakpoint(tablet) {
+				justify-content: unset;
+			}
+		}
+	}
+
+	&__input {
+		border: 1px solid $d2;
+		height: 38px;
+		outline: none;
+		padding-left: 15px;
+		width: 300px;
+
+		@include breakpoint(mobile) {
+			width: 260px;
+		}
+		@include breakpoint(mobile-landscape) {
+			width: 285px;
+		}
+
+	}
+
+	&__link {
+		background-color: transparent;
+		border: none;
+		color: $title-color;
+		cursor: pointer;
+		font-size: 14px;
+		text-decoration: underline;
+		outline: none;
+
+		&:hover {
+			color: $black;
+		}
+	}
+
+	&__links-container {
+		padding-bottom: 25px;
+	}
+
+}
+
+.checkbox {
+	& + &__label {
+		height: 14px;
+		padding: 0;
+		position: relative;
+		width: 14px;
+	}
+
+
+	& + &__label::before {
+		border: 1px solid $d2;
+		content: '';
+		height: 14px;
+		left: 0;
+		position: absolute;
+		top: 2px;
+		width: 14px;
+	}
+
+	& {
+		display: none;
+	}
+
+	& + &__label::after {
+		content: '';
+		height: 14px;
+		left: 0;
+		position: absolute;
+		top: 2px;
+		width: 14px;
+	}
+
+	&:checked + &__label::after {
+		background-color: $green;
+		border: 1px solid $d2;
+	}
+
+	&__label + .popup__label {
+		margin-left: 7px;
+	}
+}
+
+
+.popup-button-text {
+	@include breakpoint(mobile) {
+		display: none;
+	}
+
+	@include breakpoint(tablet) {
+		display: inline;
+	}
+}
+
+.login-with {
+	&__wrapper {
+		padding: 12px 0;
+
+		@include breakpoint(mobile) {
+			max-width: 50px;
+			padding: 12px 10px;
+			display: flex;
+		}
+
+		@include breakpoint(tablet) {
+			max-width: unset;
+			display: unset;
+			padding: 12px 0;
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+
+		@include breakpoint(mobile) {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		@include breakpoint(tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__button {
+		border: none;
+		color: $white;
+		cursor: pointer;
+		font-size: 14px;
+		outline: none;
+
+		&-wrapper {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		@include breakpoint(mobile) {
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+
+		@include breakpoint(tablet) {
+			width: 100%;
+			min-width: 295px;
+			padding: 17px 40px;
+			border-radius: 0;
+			height: unset;
+		}
+	}
+}
+
+.facebook {
+	background-color: #3b5998;
+
+	& svg {
+		height: 15px;
+		width: 20px;
+	}
+
+	&:hover {
+		transition: 0.5s;
+		background-color: #000000;
+	}
+}
+
+.twitter {
+	background-color: #41abe1;
+
+	& svg {
+		height: 15px;
+		width: 35px;
+	}
+
+	&:hover {
+		transition: 0.5s;
+		background-color: #000000;
+	}
+}
+
+.google {
+	background-color: #ea4335;
+
+	& svg {
+		height: 15px;
+		width: 35px;
+	}
+
+	&:hover {
+		transition: 0.5s;
+		background-color: #000000;
+	}
+}
+
+.popup-button-wrapper {
+	padding-top: 30px;
+}
+
+.call-me-hidden {
+	@include breakpoint(mobile) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.popup-phone-number {
+		text-decoration: underline;
+		color: $black;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:active {
+			text-decoration: none;
+		}
+	}
+
+	.phone-number {
+		width: 20px;
+		height: 20px;
+		fill: #000;
+		margin-right: 5px;
+	}
+}
+
+.subscribe-popup {
+	.title {
+		@include breakpoint(mobile) {
+			text-align: center;
+		}
+
+		@include breakpoint(tablet) {
+			text-align: unset;
+		}
+	}
+}
+
+.cart__container {
+	overflow: hidden;
+}
+
+.delete-cart-animation {
+	animation: cart-item-delete 0.75s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cart-item-delete {
+	0% {
+		opacity: 1;
+		transform:  translateY(0px)  ;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform:  translateY(-100%);
+		margin-bottom: -163px;
+	}
+}
+
+.image-popup__item {
+	@include breakpoint(mobile) {
+		max-width: 90%;
+		height: auto;
+		text-align: center;
+		margin-left: 5%;
+	}
+
+	@include breakpoint(mobile-landscape) {
+		max-height: 600px;
+		width: auto;
+		margin-left: 0;
+	}
+}

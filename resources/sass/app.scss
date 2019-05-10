@@ -1,0 +1,428 @@
+@import 'variables';
+@import 'header';
+@import 'popup';
+@import 'undernav';
+@import 'menu';
+@import 'forms';
+@import 'products';
+@import 'footer';
+@import 'mixins';
+@import 'item-description';
+@import 'item-tabs';
+@import 'comment-tab';
+@import 'item-buy';
+@import 'similar';
+@import 'filter';
+@import 'catalog';
+@import 'cart';
+@import 'contacts/index';
+@import 'elements';
+
+body {
+	background-color: #fff;
+	margin: 0;
+	font-family: Roboto, sans-serif;
+}
+
+a {
+	outline: none;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+
+	label {
+		&.error {
+			position: absolute;
+			left: 0;
+			top: 100%;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+svg {
+	width: auto;
+	height: auto;
+}
+
+.navbar-laravel {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+ul {
+	margin: 0;
+}
+
+.flex-head {
+	display: flex;
+
+	@include breakpoint(mobile) {
+		justify-content: flex-end;
+	}
+
+	@include breakpoint(tablet) {
+		justify-content: unset;
+	}
+}
+
+.content {
+	width: 1360px;
+
+	&.footer {
+		@include breakpoint(mobile) {
+			padding: 17px 0 0;
+		}
+
+		@include between-breakpoints(1200px, 1360px) {
+			padding: 0;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		width: 100%;
+	}
+
+	@include between-breakpoints(1200px, 1360px) {
+		width: 90%;
+	}
+
+	@include breakpoint(min-width, 1360px) {
+		width: 1360px;
+	}
+}
+
+.centered {
+	margin: 0 auto;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.orange-button {
+	background-color: $orange-bg;
+	border: none;
+	color: $white;
+	cursor: pointer;
+	outline: none;
+	padding: 20px 45px;
+	width: fit-content;
+
+	&:hover {
+		background-color: $black;
+	}
+}
+
+.hidden-block {
+	display: none;
+}
+
+.my-block {
+	display: none;
+
+	&.is-active {
+		display: block;
+	}
+}
+
+.my-button {
+	&.is-active {
+		display: flex;
+	}
+}
+
+.active-star {
+	fill: $orange-bg;
+	height: 15px;
+	width: 15px;
+	margin-left: 5px;
+
+	&:first-child {
+		margin: 0;
+	}
+
+	@include between-breakpoints(1200px, 1360px) {
+		height: 12px;
+		margin-left: 3px;
+		width: 12px;
+	}
+
+	@include breakpoint(tablet-landscape) {
+		width: 12px;
+		height: 12px;
+	}
+
+	@include breakpoint(min-width, 1360px) {
+		height: 15px;
+		width: 15px;
+	}
+}
+
+.inactive-star {
+	fill: #a4a4a4;
+	height: 15px;
+	width: 15px;
+	margin-left: 5px;
+
+	&:first-child {
+		margin: 0;
+	}
+
+	@include between-breakpoints(1200px, 1360px) {
+		height: 12px;
+		width: 12px;
+		margin-left: 3px;
+	}
+
+	@include breakpoint(tablet-landscape) {
+		width: 12px;
+		height: 12px;
+	}
+
+	@include breakpoint(min-width, 1360px) {
+		width: 15px;
+		height: 15px;
+	}
+
+}
+
+.characteristic {
+	fill: $orange-bg;
+	height: 38px;
+	width: 38px;
+}
+
+.form-flex {
+	display: flex;
+
+	.input-wrapper {
+		position: relative;
+
+		label {
+			top: 100%;
+			color: #f00;
+			left: 0;
+			position: absolute;
+
+			@include breakpoint(mobile) {
+				font-size: 12px;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.footer-block__email-input {
+		&.error {
+			border: 1px solid #f00;
+		}
+
+		@include breakpoint(mobile) {
+			padding-left: 15px;
+		}
+
+		@include breakpoint(tablet) {
+			padding-left: 30px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		width: 90%;
+		justify-content: flex-start;
+	}
+
+	@include breakpoint(min-width, 1360px) {
+		width: 100%;
+	}
+}
+
+.flex-vertical-center {
+	align-items: center;
+	display: flex;
+}
+
+li {
+	&:last-child {
+		.path-divider {
+			display: none;
+		}
+	}
+}
+
+.main__wrapper {
+	background-color: $white;
+}
+
+.mfp-fadeout {
+
+	.mfp-with-anim {
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	&.mfp-bg {
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	&.white-popup {
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	&.mfp-ready {
+
+		.mfp-with-anim {
+			opacity: 1;
+		}
+
+		&.mfp-bg {
+			opacity: 0.8;
+		}
+
+		&.white-popup {
+			opacity: 1;
+		}
+	}
+
+	&.mfp-removing {
+
+		.mfp-with-anim {
+			opacity: 0;
+		}
+
+		&.mfp-bg {
+			opacity: 0;
+		}
+
+		&.white-popup {
+			opacity: 0;
+		}
+	}
+}
+
+.search {
+	display: flex;
+	width: 100%;
+
+	&-input {
+		width: 100%;
+		background-color: transparent;
+		outline: none;
+		color: #fff;
+		border: 1px solid $title-color;
+		padding: 5px 0 5px 10px;
+
+		&::placeholder {
+			color: $d2;
+		}
+	}
+
+	&-select {
+		background-color: transparent;
+		color: #fff;
+		border: 1px solid #333;
+		outline: none;
+
+		&:focus {
+			outline: none;
+			border: none;
+		}
+	}
+
+	&-submit {
+		background: none;
+		fill: $d2;
+		border: 1px solid #333;
+		outline: none;
+		cursor: pointer;
+	}
+
+	.flex {
+		width: 75%;
+	}
+
+	.search-submit {
+		width: 10%;
+		min-width: 30px;
+	}
+}
+
+.full-width {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.close-mmenu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 8px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+
+	&__icon {
+		width: 25px;
+		height: 25px;
+		fill: #fff;
+	}
+}
+
+.sub-button {
+	display: flex;
+	align-items: center;
+
+	.sub-text {
+		@include breakpoint(mobile) {
+			display: none;
+		}
+
+		@include breakpoint(tablet) {
+			display: inline;
+		}
+	}
+}
+
+.sub-icon {
+	width: 30px;
+	height: 30px;
+	fill: $white;
+	padding: 0 10px;
+
+	@include breakpoint(mobile) {
+		display: inline;
+	}
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+}

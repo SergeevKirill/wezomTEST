@@ -1,0 +1,134 @@
+@import "variables";
+@import "mixins";
+
+.navigation {
+	&.header-content {
+		@include breakpoint(mobile) {
+			display: none;
+		}
+
+		@include breakpoint(tablet) {
+			display: flex;
+		}
+	}
+}
+
+.header {
+	background-color: #696969;
+	width: 100%;
+	display: flex;
+
+	@include breakpoint(mobile) {
+		z-index: 21;
+	}
+
+	@include breakpoint(tablet) {
+		position: unset;
+	}
+
+	&-burger {
+		padding: 20px;
+
+		@include breakpoint(mobile) {
+			display: flex;
+		}
+
+		@include breakpoint(tablet) {
+			display: none;
+		}
+
+		&__wrapper {
+			background-color: transparent;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			outline: none;
+
+		}
+
+		&__item {
+			background-color: #fff;
+			border-radius: 2px;
+			content: '';
+			height: 5px;
+			margin-top: 3px;
+			width: 25px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&-content {
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		@include breakpoint(mobile) {
+			display: block;
+		}
+
+		@include breakpoint(tablet) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&-menu {
+		list-style: none;
+		display: flex;
+		padding: 0;
+
+		&__item {
+			color: $menu-item;
+			font-size: 12px;
+			line-height: 50px;
+			padding: 16px 15px;
+			outline: none;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				transition: 0.25s;
+				border-bottom: 2px solid $menu-item-hover-border;
+				color: $white;
+			}
+		}
+
+		@include breakpoint(mobile) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		@include breakpoint(tablet) {
+			flex-direction: row;
+		}
+	}
+}
+
+.button-wrapper {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.button-container {
+	display: flex;
+}
+
+.mmenu__navigation {
+	.header-menu__item {
+		padding: 0;
+		background: none;
+
+		&:hover {
+			background: none;
+		}
+
+		&:active {
+			background: none;
+		}
+	}
+}

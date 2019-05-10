@@ -1,0 +1,63 @@
+@import 'contacts-data';
+@import 'contacts-feedback';
+@import 'maps';
+
+.bread-crumbs__wrapper {
+	padding-top: 20px;
+
+	.path-container {
+		@include breakpoint(tablet) {
+			margin: 0 10px;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			margin: 0;
+		}
+	}
+}
+
+.no-underline {
+	text-decoration: none;
+}
+
+.page-title {
+	font-size: 36px;
+	color: $title-color;
+	font-family: ProximaNova, sans-serif;
+	font-weight: bold;
+	padding: 15px 0 10px;
+	margin: 0;
+	margin-bottom: 20px;
+	
+	&__wrapper {
+		position: relative;
+
+		@include breakpoint(tablet) {
+			margin: 0 10px 20px;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			margin: 0 0 20px;
+		}
+		
+		&::before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 100%;
+			right: 0;
+			height: 1px;
+			background-color: #dbdbdb;
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 100%;
+			right: calc(100% - 95px);
+			height: 1px;
+			background-color: $orange-bg;
+		}
+	}
+}

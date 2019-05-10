@@ -1,0 +1,355 @@
+.catalog {
+	&__wrapper {
+		padding: 30px 0;
+		display: flex;
+
+		@include breakpoint(mobile) {
+			flex-direction: column;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			flex-direction: row;
+		}
+	}
+
+	&__page-navigation {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 52px 0 70px;
+	}
+
+	&__page-number {
+		font-size: 14px;
+		font-weight: bold;
+		font-style: italic;
+		color: $title-color;
+		text-decoration: none;
+		padding: 0 8px 14px;
+
+		@include breakpoint(mobile) {
+			margin: 0 5px;
+		}
+
+		@include breakpoint(mobile-landscape) {
+			margin: 0 14px;
+		}
+
+		&:hover {
+			color: #a4a4a4;
+			border-bottom: 2px solid #ffc925;
+			padding-bottom: 12px;
+		}
+
+		&.is-active {
+			color: #a4a4a4;
+			border-bottom: 2px solid #ffc925;
+			padding-bottom: 12px;
+		}
+	}
+
+	&-items {
+		display: flex;
+
+		.item-special-tag {
+			@include breakpoint(tablet-landscape) {
+				width: 100%;
+				justify-content: center;
+			}
+
+			.special-image {
+				@include breakpoint(tablet-landscape) {
+					width: 33%;
+					height: 33%;
+				}
+
+				@include breakpoint(min-width, 1200px) {
+					width: unset;
+					height: unset;
+				}
+			}
+		}
+
+		.item__bottom-button-text {
+			@include breakpoint(tablet) {
+				font-size: 12px;
+			}
+
+			@include breakpoint(min-width, 1360px) {
+				font-size: 14px;
+			}
+		}
+
+		.item-title__text {
+			@include breakpoint(tablet) {
+				font-size: 13px;
+			}
+
+			@include breakpoint(min-width, 1360px) {
+				font-size: 17px;
+			}
+		}
+
+		.item-reviews__review {
+			@include breakpoint(tablet) {
+				font-size: 10px;
+			}
+
+			@include breakpoint(min-width, 1200px) {
+				font-size: 12px;
+			}
+		}
+
+		.item__in-stock {
+			@include breakpoint(tablet) {
+				font-size: 10px;
+				display: flex;
+				align-items: center;
+			}
+
+			@include breakpoint(min-width, 1200px) {
+				font-size: 12px;
+				display: block;
+			}
+		}
+
+		.item-reviews {
+			@include breakpoint(tablet-landscape) {
+				flex-direction: row;
+			}
+		}
+
+		.products__container {
+			width: 100%;
+			flex-wrap: wrap;
+
+			.item__wrapper {
+				padding: 20px 8px 15px;
+				position: relative;
+
+				@include breakpoint(mobile) {
+					width: 80%;
+
+					&:nth-child(2n) {
+						border-left: none;
+					}
+				}
+
+				@include breakpoint(min-width, 375px) {
+					width: 42%;
+
+					&:nth-child(2n) {
+						&::before {
+							position: absolute;
+							content: '';
+							left: -5%;
+							top: 0;
+							bottom: 0;
+							width: 1px;
+							background-color: $d2;
+						}
+					}
+				}
+
+				@include breakpoint(mobile-landscape) {
+					width: 45%;
+
+					&:nth-child(2n) {
+						border-left: 1px solid $d2;
+
+						&::before {
+							content: unset;
+						}
+					}
+				}
+
+				@include breakpoint(tablet-landscape) {
+					width: 31%;
+
+					&:nth-child(4n) {
+						border-left: none;
+					}
+
+				}
+
+				.item-similar-price {
+					&.item__price-wrapper {
+						@include breakpoint(mobile) {
+							justify-content: space-between;
+						}
+
+						@include breakpoint(tablet) {
+							justify-content: unset;
+						}
+
+						.item__price-old {
+							@include breakpoint(mobile) {
+								margin-left: 0;
+							}
+
+							@include breakpoint(tablet) {
+								margin-left: 60px;
+							}
+
+							@include breakpoint(tablet-landscape) {
+								margin-left: 10%;
+							}
+
+							@include breakpoint(min-width, 1360px) {
+								margin-left: 60px;
+							}
+						}
+					}
+
+
+				}
+			}
+
+			@include breakpoint(min-width, 375px) {
+				justify-content: space-around;
+			}
+
+			@include breakpoint(mobile-landscape) {
+				justify-content: unset;
+			}
+		}
+
+		&__wrapper {
+			@include breakpoint(mobile) {
+				width: 100%;
+				padding-left: 0;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				width: 75%;
+				padding-left: 20px;
+			}
+
+			.bread-crumbs {
+				@include breakpoint(mobile) {
+					display: none;
+				}
+
+				@include breakpoint(tablet-landscape) {
+					display: flex;
+				}
+			}
+		}
+
+		&__title {
+			font-size: 36px;
+			font-weight: bold;
+			color: $title-color;
+			font-family: ProximaNova, sans-serif;
+			margin: 25px 5px 30px;
+
+			@include breakpoint(mobile) {
+				text-align: center;
+				font-size: 24px;
+			}
+
+			@include breakpoint(tablet) {
+				text-align: unset;
+				font-size: 24px;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				font-size: 28px;
+			}
+
+			@include breakpoint(min-width, 1360px) {
+				font-size: 36px;
+			}
+		}
+
+		&__upper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@include breakpoint(mobile) {
+				flex-direction: column;
+				display: none;
+			}
+
+
+			@include breakpoint(tablet-landscape) {
+				flex-direction: unset;
+				display: flex;
+			}
+		}
+	}
+}
+
+.adaptive {
+	&.catalog-items__upper {
+		@include breakpoint(mobile) {
+			display: block;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			display: none;
+		}
+	}
+
+	&.bread-crumbs {
+		@include breakpoint(mobile) {
+			display: block;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			display: none;
+		}
+	}
+}
+
+.bread-crumbs {
+	margin: -5px 8px;
+}
+
+.sort {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include breakpoint(mobile) {
+			padding: 0 5px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			padding: 0;
+		}
+	}
+
+	&__title {
+		font-family: ProximaNova, sans-serif;
+		color: $title-color;
+		font-size: 14px;
+		margin-right: 20px;
+
+		@include breakpoint(mobile) {
+			display: none;
+		}
+
+		@include breakpoint(tablet) {
+			display: inline;
+			margin-left: 35%;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			margin-left: 0;
+		}
+	}
+}
+
+.buy-hide {
+	@include breakpoint(mobile) {
+		display: none;
+	}
+
+	@include breakpoint(mobile-landscape) {
+		display: inline;
+	}
+}
+

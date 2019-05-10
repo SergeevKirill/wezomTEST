@@ -1,0 +1,223 @@
+.button {
+	padding: 0 30px;
+	border: none;
+	outline: none;
+	font-family: $myriad;
+	font-size: 12px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: $white;
+
+	&:hover {
+		transition: 0.25s;
+	}
+
+	&-buy {
+		border: none;
+		cursor: pointer;
+		outline: none;
+		padding: 12px 40px 12px 24px;
+	}
+
+	&--gradient {
+		background: linear-gradient(to right, $orange-bg, #ffae00);
+	}
+
+	&--grey {
+		background-color: #afb9c6;
+	}
+
+	&--no-uppercase {
+		text-transform: none;
+	}
+
+	&-popup {
+		font-size: 14px;
+		padding: 20px 25px;
+		width: fit-content;
+
+		&:hover {
+			transition: 0.25s;
+			background-color: #717381;
+		}
+	}
+
+	&--medium {
+		padding: 0 33px;
+	}
+
+	&__icon {
+		width: 16px;
+		height: 16px;
+		margin-right: 10px;
+
+		&--cart {
+			fill: $white;
+			height: 24px;
+			width: 28px;
+		}
+	}
+
+	&__footer--big {
+		background-color: $orange-bg;
+		border: none;
+		color: $white;
+		cursor: pointer;
+		font-size: 16px;
+		font-weight: bold;
+		outline: none;
+		padding: 20px 45px;
+		width: fit-content;
+		text-transform: uppercase;
+
+		&:hover {
+			transition: 0.25s;
+			background-color: $dark-orange;
+		}
+
+		@include breakpoint(mobile) {
+			padding: 15px 5px;
+		}
+
+		@include breakpoint(tablet) {
+			padding: 15px 5px;
+			font-size: 12px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			padding: 20px 30px;
+		}
+
+		@include between-breakpoints(1200px, 1360px) {
+			font-size: 14px;
+			padding: 20px 35px;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			font-size: 16px;
+			padding: 15px 20px;
+		}
+
+	}
+
+	&--orange {
+		background-color: $orange-bg;
+
+		&:hover {
+			background-color: $dark-orange;
+		}
+	}
+
+	&--control {
+		display: flex;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		align-items: center;
+		flex-direction: column;
+		text-decoration: none;
+		color: $title-color;
+		outline: none;
+		font-size: 10px;
+		text-transform: uppercase;
+
+		&:first-child {
+			border-left: none;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			border-left: none;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			border-left: 1px solid $d2;
+			padding: 0 25px;
+		}
+
+		svg {
+			width: 50px;
+			height: 35px;
+			padding-bottom: 10px;
+			fill: #b4b9bf;
+
+			@include breakpoint(tablet) {
+				width: 35px;
+			}
+		}
+	}
+
+	&--red {
+		align-items: center;
+		background-color: #ff4800;
+		display: flex;
+		font-size: 14px;
+		padding: 20px 40px;
+
+		&:hover {
+			transition: 0.25s;
+			background-color: #ff3000;
+		}
+
+		svg {
+			height: 12px;
+			width: 12px;
+			fill: #fff;
+			padding-right: 5px;
+		}
+
+		@include breakpoint(mobile) {
+			font-size: 12px;
+			padding: 20px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			font-size: 14px;
+			padding: 16px 40px;
+		}
+	}
+
+	&--orange-gradient {
+		background: linear-gradient(to right, #ff8500, #ffae00);
+		font-size: 14px;
+		font-weight: bold;
+		padding: 20px 40px;
+
+		@include breakpoint(mobile) {
+			font-size: 12px;
+			padding: 20px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			font-size: 14px;
+			padding: 15px 28px;
+		}
+	}
+
+	&--search {
+		display: flex;
+		padding: 20px 55px;
+		font-size: 16px;
+		font-weight: bold;
+
+		@include breakpoint(mobile) {
+			padding: 20px;
+		}
+
+		@include breakpoint(tablet) {
+			padding: 17px 55px;
+
+			svg {
+				display: none;
+			}
+		}
+	}
+}
+
+.section-title {
+	color: $title-color;
+	font-size: 36px;
+	font-weight: normal;
+	margin: 0;
+	padding: 38px 0 15px;
+	border-bottom: 1px solid $orange-bg;
+}

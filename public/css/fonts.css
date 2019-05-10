@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Italic.ttf?42bbe4eefcde1297b11dc4b6491e9746) format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Medium.ttf?d08840599e05db7345652d3d417574a9) format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-MediumItalic.ttf?bd19ad60600a1537c00d3b4923a5e5de) format("truetype");
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Black.ttf?ec4c9962ba54eb91787aa93d361c10a8) format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-BlackItalic.ttf?50705c5ed1205b63efdbfee941a6b655) format("truetype");
+  font-style: italic;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-LightItalic.ttf?d1efcd4d126837fe0dcf9b6cf3a00d64) format("truetype");
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Light.ttf?fc84e998bc29b297ea20321e4c90b6ed) format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Bold.ttf?ee7b96fa85d8fdb8c126409326ac2d2b) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-BoldItalic.ttf?1eb7a893589ddce89d81cdb22a356660) format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url(/fonts/MyriadPro-BoldIt.eot?5f4abac7a6a52779399d66fffd0b1f64);
+  src: local("Myriad Pro Bold Condensed Italic"), local("MyriadPro-BoldCondIt"), url(/fonts/MyriadPro-BoldIt.eot?5f4abac7a6a52779399d66fffd0b1f64) format("embedded-opentype"), url(/fonts/MyriadPro-BoldIt.woff?5fea8b21eda5b12969e5803e7de66fc4) format("woff"), url(/fonts/MyriadPro-BoldIt.ttf?3af2bf2e84ca6919d1fbb3d85be2aa42) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url(/fonts/MyriadPro-Bold.eot?791db10c0c385985266105a2ffba7ed4);
+  src: local("Myriad Pro Bold"), local("MyriadPro-Bold"), url(/fonts/MyriadPro-Bold.eot?791db10c0c385985266105a2ffba7ed4) format("embedded-opentype"), url(/fonts/MyriadPro-Bold.woff?cd0e440e50031db4a74b3f3b62916b44) format("woff"), url(/fonts/MyriadPro-Bold.ttf?d5b486487376f7295854815db1a93224) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url(/fonts/MyriadPro-Regular.eot?1d31e744cee077ef32f699ca2d3e8a0c);
+  src: local("Myriad Pro Regular"), local("MyriadPro-Regular"), url(/fonts/MyriadPro-Regular.eot?1d31e744cee077ef32f699ca2d3e8a0c) format("embedded-opentype"), url(/fonts/MyriadPro-Regular.woff?396e556a2d523ca7b2829a60a3b04732) format("woff"), url(/fonts/MyriadPro-Regular.ttf?be82e3850974c1ccddfcf305d93ad7ce) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url(/fonts/MyriadPro-It.eot?da5ea721ca3a0ab672eaaaf18a7234dd);
+  src: local("Myriad Pro Condensed Italic"), local("MyriadPro-CondIt"), url(/fonts/MyriadPro-It.eot?da5ea721ca3a0ab672eaaaf18a7234dd) format("embedded-opentype"), url(/fonts/MyriadPro-It.woff?b4007294c629583aa6ad67ad2e24590f) format("woff"), url(/fonts/MyriadPro-It.ttf?7dfc0e40aeff0e17f788aaa7004b87a6) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/ProximaNova-Regular.ttf?7ce6760d17685c466ba04d1b2c63c38b) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/ProximaNova-RegularIt.ttf?61fd1e8306cce46e1c4aa51d01c24f92) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/ProximaNova-Bold.ttf?926a08fb27e3303c7452b0bdd2d5e5ab) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/ProximaNova-BoldIt.ttf?0e18c5b3dd6cfbb1d32c15b4c9cc8106) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/ProximaNova-Black.ttf?a0606c5fef28b9e57f501db027063141) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/fonts/ProximaNova-BlackIt.ttf?77aed8ec40b789d1ceafb0fa7dabccf8) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Europe";
+  src: url(/fonts/Europe-BoldItalic.ttf?265a460fa6d579afaa022d8a0b1d52f9) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+

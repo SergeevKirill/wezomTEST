@@ -1,0 +1,317 @@
+
+.comment {
+	&__item {
+		background-image: url('../../public/static/img/quotation-bg.png');
+		background-repeat: no-repeat;
+		background-position: 15px 70%;
+		width: 100%;
+		padding-bottom: 5px;
+
+		&:nth-child(2) {
+			padding-bottom: 0;
+		}
+	}
+
+	&__head {
+		padding-top: 30px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__author {
+		color: $title-color;
+		font-size: 17px;
+		font-family: ProximaNova, sans-serif;
+	}
+
+	&__date {
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		color: #757575;
+		font-family: ProximaNova, sans-serif;
+	}
+
+	&__rating {
+		padding-top: 20px;
+		font-size: 13px;
+		font-family: ProximaNova, sans-serif;
+		color: #9b9b9b;
+		display: flex;
+		align-items: center;
+
+		.active-star {
+			width: 15px;
+			height: 15px;
+			margin-left: 5px;
+
+			&:last-child {
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&__text {
+		padding-top: 20px;
+		font-size: 14px;
+		color: #757575;
+		font-family: ProximaNova, sans-serif;
+		line-height: 24px;
+	}
+
+	&-label {
+		font-size: 14px;
+		color: $title-color;
+		line-height: 40px;
+		font-family: ProximaNova, sans-serif;
+		padding-top: 3px;
+	}
+
+	&-row {
+		display: flex;
+
+		@include breakpoint(mobile) {
+			flex-wrap: wrap;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			flex-wrap: unset;
+		}
+	}
+
+	&-input {
+		height: 38px;
+		width: 204px;
+		border: 1px solid $d2;
+		outline: none;
+		background-color: #fff;
+		padding-left: 13px;
+		color: $title-color;
+		font-family: ProximaNova, sans-serif;
+		font-size: 14px;
+
+		&::placeholder {
+			color: #9c9c9c;
+		}
+
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+
+			& {
+				label {
+					&.error {
+						position: absolute;
+						left: 0;
+						top: 100%;
+					}
+				}
+			}
+
+			@include between-breakpoints(1200px, 1360px) {
+				width: 50%;
+				padding-right: 0;
+			}
+
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
+
+			@include breakpoint(min-width, 1360px) {
+				width: unset;
+				padding-right: 15px;
+			}
+		}
+	}
+
+	&__textarea {
+		outline: none;
+		border: 1px solid $d2;
+		background-color: #fff;
+		resize: none;
+		box-sizing: border-box;
+		color: $title-color;
+		font-family: ProximaNova, sans-serif;
+		font-size: 14px;
+		padding: 12px;
+
+		&::placeholder {
+			font-family: ProximaNova, sans-serif;
+			color: #9c9c9c;
+			font-size: 14px;
+		}
+
+		&.error {
+			border: 1px solid #ff0000;
+		}
+	}
+
+	&-submit-button {
+		font-size: 14px;
+		line-height: 40px;
+		background-color: #afb9c6;
+		color: #fff;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		font-family: ProximaNova, sans-serif;
+		margin-top: 35px;
+		padding: 6px 50px;
+
+		&:hover {
+			transition: 0.25s;
+			background-color: #4f8fe3;
+		}
+
+		&:active {
+			background-color: #4f8fe3;
+		}
+	}
+
+	&-textarea-label {
+		font-size: 14px;
+		color: $title-color;
+		line-height: 40px;
+		font-family: ProximaNova, sans-serif;
+		padding-top: 10px;
+
+	}
+}
+
+.comments__wrapper {
+	min-height: 560px;
+	display: flex;
+
+	@include breakpoint(mobile) {
+		flex-direction: column;
+	}
+
+	@include breakpoint(tablet) {
+		flex-direction: row;
+		padding: 0 10px;
+		width: calc(100% - 20px);
+	}
+
+	@include breakpoint(min-width, 1200px) {
+		padding: 0;
+		width: 100%;
+	}
+}
+
+.your-rating {
+	cursor: pointer;
+	margin-top: 10px;
+
+	.active-star {
+		margin-left: 0;
+	}
+
+	.inactive-star {
+		margin-left: 0;
+	}
+}
+
+.your-rating__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
+
+	@include breakpoint(min-width, 1200px) {
+		width: unset;
+	}
+}
+
+
+
+.comments {
+	&__container {
+		width: 50%;
+		padding-right: 10px;
+
+		@include breakpoint(mobile) {
+			padding: 0 10px;
+			width: calc(100% - 20px);
+		}
+
+		@include breakpoint(tablet) {
+			width: 50%;
+			padding: 0 10px 0 0;
+		}
+	}
+}
+
+.comment__feedback {
+	width: 50%;
+	margin-top: 35px;
+
+	@include breakpoint(mobile) {
+		width: calc(100% - 20px);
+		padding: 0 10px;
+	}
+
+	@include breakpoint(tablet) {
+		width: 50%;
+		padding: 0;
+	}
+}
+
+.leave-a-comment {
+	margin-left: 10px;
+	padding: 20px 30px 35px;
+	background-color: #f5f5f5;
+	position: sticky;
+	top: 10px;
+
+	@include breakpoint(mobile) {
+		margin-left: 0;
+	}
+
+	@include breakpoint(tablet) {
+		margin-left: 10px;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 40px;
+		color: $title-color;
+		font-weight: bold;
+		font-family: ProximaNova, sans-serif;
+		margin: 0;
+	}
+}
+
+.comment-star {
+	fill: #a4a4a4;
+	height: 15px;
+	width: 15px;
+	margin-left: 5px;
+
+	&.comment-active-star {
+		fill: #ff8900;
+	}
+
+	&:first-child {
+		margin: 0;
+	}
+
+	@include between-breakpoints(1200px, 1360px) {
+		height: 12px;
+		margin-left: 3px;
+		width: 12px;
+	}
+
+	@include breakpoint(tablet-landscape) {
+		width: 12px;
+		height: 12px;
+	}
+
+	@include breakpoint(min-width, 1360px) {
+		height: 15px;
+		width: 15px;
+	}
+}

@@ -1,0 +1,144 @@
+.contacts-google-map {
+	height: 100%;
+
+	@include breakpoint(mobile) {
+		width: 100%;
+	}
+
+	@include breakpoint(tablet) {
+		width: calc(100% - 20px);
+	}
+
+	&__container {
+		margin-left: 25px;
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		@include breakpoint(mobile) {
+			width: calc(100% - 50px);
+		}
+
+		@include breakpoint(tablet) {
+			width: calc(100% - 25px);
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			width: 100%;
+		}
+	}
+
+	&__reset-map-button {
+		position: absolute;
+		border: none;
+		outline: none;
+		font-family: Roboto, sans-serif;
+		font-size: 16px;
+		color: #fff;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 7px 15px;
+		cursor: pointer;
+		top: 0;
+		z-index: 1000;
+		background-color: #afb9c6;
+
+		@include breakpoint(mobile) {
+			right: 0;
+		}
+
+		@include breakpoint(tablet) {
+			right: 20px;
+		}
+	}
+
+	&__button-wrapper {
+		position: absolute;
+		top: -50px;
+		left: 25px;
+		display: flex;
+	}
+
+	&__button {
+		height: 50px;
+		padding: 17px 26px;
+		text-transform: uppercase;
+		display: flex;
+		border: none;
+		outline: none;
+		background-color: #afb9c6;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-family: Roboto, sans-serif;
+		font-weight: bold;
+		font-size: 16px;
+		margin-left: 1px;
+		cursor: pointer;
+
+		@include breakpoint(min-width, 320px) {
+			padding: 15px 18px;
+		}
+
+		@include breakpoint(min-width, 375px) {
+			padding: 17px 26px;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&.is-active {
+			background-color: $orange-bg;
+		}
+
+	}
+
+	&__wrapper {
+		width: 100%;
+		position: relative;
+
+		@include breakpoint(mobile) {
+			width: 100%;
+			margin-top: 60px;
+			height: 300px;
+		}
+
+		@include breakpoint(mobile-landscape) {
+			height: 500px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 70%;
+			margin: 0;
+			height: unset;
+			margin-right: 10px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			width: 50%;
+		}
+
+		@include breakpoint(min-width, 1200px) {
+			width: 59.5%;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			margin-right: 0;
+		}
+	}
+}
+
+.map__wrapper {
+	display: flex;
+	padding-bottom: 55px;
+
+	@include breakpoint(mobile) {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	@include breakpoint(tablet) {
+		flex-direction: row;
+	}
+}

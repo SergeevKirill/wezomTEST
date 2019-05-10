@@ -1,0 +1,47 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "eslint": "eslint ./resources/js/*.js --fix --cache --cache-location ./cache/eslintcache-assets",
+        "sass-lint": "sass-lint --config ./.scss-lint.yml -v -q -i ./resources/sass/fonts.scss",
+        "test": "npm run eslint && npm run sass-lint"
+    },
+    "devDependencies": {
+        "@ayctor/laravel-mix-svg-sprite": "^0.1.0",
+        "axios": "^0.18",
+        "bootstrap": "^4.0.0",
+        "browser-sync": "^2.26.3",
+        "browser-sync-webpack-plugin": "^2.0.1",
+        "cross-env": "^5.1",
+        "eslint": "^5.16.0",
+        "ion-rangeslider": "^2.3.0",
+        "jquery": "^3.2",
+        "jquery.mmenu": "^7.3.3",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.5",
+        "magnific-popup": "^1.1.0",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-lint": "^1.12.1",
+        "sass-loader": "^7.1.0",
+        "svg-sprite-loader": "^4.1.3",
+        "svg-spritemap-webpack-plugin": "^3.2.2",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.9",
+        "wezom-standard-tabs": "^2.1.0"
+    },
+    "dependencies": {
+        "eslint-config-wezom-relax": "^1.1.0",
+        "happiness-scss-config": "^1.0.1",
+        "inputmask": "^4.0.6",
+        "jquery-validation": "^1.19.0",
+        "select2": "^4.0.6-rc.1"
+    }
+}

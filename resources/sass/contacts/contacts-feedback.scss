@@ -1,0 +1,221 @@
+.contacts-feedback {
+	&__wrapper {
+		background-color: #f5f5f5;
+		padding: 20px 35px 35px;
+
+		@include breakpoint(mobile-landscape) {
+			margin: 0 40px;
+		}
+
+		@include breakpoint(tablet) {
+			width: calc(30% - 30px);
+			margin: 0;
+			margin-left: 10px;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			width: calc(50% - 30px);
+		}
+
+		@include breakpoint(min-width, 1200px) {
+			width: calc(37% - 20px);
+		}
+
+		.comment-submit-button {
+			margin-top: 20px;
+			padding: 6px 32px;
+
+			@include breakpoint(tablet) {
+				line-height: 40px;
+				font-size: 12px;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				line-height: 40px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		color: $title-color;
+		font-family: ProximaNova, sans-serif;
+		margin: 0;
+	}
+
+	&__label {
+		font-size: 14px;
+		color: $title-color;
+		font-family: ProximaNova, sans-serif;
+	}
+
+	&__input {
+		margin-top: 12px;
+		height: 38px;
+		background-color: #fff;
+		border: 1px solid $d2;
+		width: 199px;
+		padding-left: 15px;
+		font-family: ProximaNova, sans-serif;
+		color: $title-color;
+		font-size: 14px;
+
+		@include breakpoint(mobile) {
+			width: calc(100% - 15px);
+		}
+
+		@include breakpoint(mobile-landscape) {
+			width: 100%;
+		}
+
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			width: 199px;
+		}
+
+		@include breakpoint(min-width, 1200px) {
+			width: 95%;
+		}
+
+		@include breakpoint(min-width, 1360px) {
+			width: 199px;
+		}
+
+		&::placeholder {
+			color: $d2;
+		}
+	}
+
+	&__wrapper--input {
+		display: inline-flex;
+		justify-content: center;
+		flex-direction: column;
+		margin-top: 20px;
+
+		@include breakpoint(mobile) {
+			width: 100%;
+		}
+
+		@include breakpoint(mobile-landscape) {
+			width: 42%;
+			padding-left: 0;
+			margin-left: 30px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		@include breakpoint(tablet) {
+			width: 100%;
+			padding-left: 0;
+			margin-left: 0;
+		}
+
+		@include breakpoint(tablet-landscape) {
+			width: 46%;
+			padding-left: 20px;
+		}
+
+		@include breakpoint(mikn-width, 1200px) {
+			padding-left: 25px;
+		}
+
+		.contacts-feedback__label {
+			@include breakpoint(tablet) {
+				margin-left: 0;
+			}
+
+			@include breakpoint(tablet-landscape) {
+				margin-left: 15px;
+			}
+		}
+
+
+		&:nth-child(odd) {
+			padding-left: 0;
+
+			.contacts-feedback__input {
+				margin-left: 0;
+			}
+
+			.contacts-feedback__label {
+				margin-left: 0;
+			}
+
+			.error-wrapper {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__textarea {
+		margin-top: 12px;
+		resize: none;
+		width: calc(100% - 30px);
+		border: 1px solid $d2;
+		background-color: #fff;
+		padding: 10px 15px 0;
+		font-family: ProximaNova, sans-serif;
+		color: $title-color;
+		font-size: 14px;
+
+		@include breakpoint(mobile) {
+			width: calc(100% - 30px);
+		}
+
+		@include breakpoint(tablet) {
+			width: calc(100% - 15px);
+		}
+
+		@include breakpoint(tablet-landscape) {
+			width: calc(100% - 30px);
+		}
+
+		&::placeholder {
+			font-family: ProximaNova, sans-serif;
+			color: $d2;
+			font-size: 14px;
+		}
+	}
+
+	&__wrapper--textarea {
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+
+		.error-wrapper {
+			margin-left: 0;
+		}
+	}
+}
+
+.error-wrapper {
+	position: relative;
+
+	@include breakpoint(tablet) {
+		margin-left: 0;
+	}
+
+	@include breakpoint(tablet-landscape) {
+		margin-left: 15px;
+	}
+
+	& .error {
+		border: 1px solid red;
+	}
+
+	label {
+		&.error {
+			position: absolute;
+			border: none;
+			left: 0;
+			top: 100%;
+			font-size: 12px;
+		}
+	}
+}
